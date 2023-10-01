@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&display=swap');
+:root {
+    --background: #080808;
+    --text: #fff;
+    --pink: rgb(255, 37, 106);
+    --text2: #ababab;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mukta', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background: var(--background);
+    color: var(--text);
+}
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/medium.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.logo-contain {
+    display: flex;
+    font-size: 2rem;
+}
+.logo1, .logo2 {
+    padding: 0 10px;
+}
+.logo1 {
+    color:var(--pink);
+}
+.container {
+    padding: 10px 5%;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.4rem;
+    position: relative;
+}
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--pink);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+.header-text {
+    margin-top: 20%;
+    margin-left: 20%;
+    font-size: 30px;
+}
+.header-text h1 {
+    font-size: 6rem;
+    
+}
+.header-text h1 span {
+    color: var(--pink);
+}
+/* --------------about----------------- */
+#about {
+    padding: 30px 0;
+    color: var(--text2);
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1 {
+    flex-basis: 35%;
+}
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2 {
+    flex-basis: 60%;
+}
+.subtitle {
+    font-size: 3.8rem;
+    font-weight: 600;
+    color: var(--text);
+}
+.tab-title {
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--pink);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after {
+    width: 50%;
+}
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span {
+    color: var(--pink);
+    font-size: 1rem;
+}
+.tab-contents {
+    display: none;
+}
+.tab-contents.active-tab {
+    display: block;
+
+}
+/* --------------projects--------------- */
+#projects {
+    padding: 50px 0;
+}
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+.project {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.project img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), rgb(255, 37, 106));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    text-align: center;
+    font-size: 1rem;
+    transition: height 0.5s;
+}
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+.layer a {
+    margin-top: 20px;
+    color: var(--pink);
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 60px;
+    background-color: var(--text);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    transition: background 0.5s;
+}
+.layer a:hover {
+    background: var(--background);
+    color: var(--pink);
+}
+.project:hover img {
+    transform: scale(1.1);
+}
+.project:hover .layer {
+    height: 100%;
+}
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid var(--pink);
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+}
+.btn:hover {
+    background: var(--pink);
+}
+/* -------------------contact------------------ */
+.contact-center {
+    text-align: center;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+.social-icons a {
+    color: var(--pink);
+    text-decoration: none;
+    font-size: 25px;
+    line-height: 55px;
+    background-color: var(--text);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 10px 10px 30px 10px;
+    transition: background 0.5s;
+}
+.social-icons a:hover {
+    background: var(--pink);
+    color: var(--text);
+}
+.contact-center p {
+    color: var(--text);
+}
+.contact-center .email {
+    color: var(--text);
+    text-decoration: none;
+}
+/* ----------------footer----------------- */
+.footer {
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid var(--text2);
+}
+nav .fa-solid {
+    display: none;
+}
+
+/* ------------------small screen-------------------- */
+@media screen and (max-width: 900px) {
+    #header {
+        background-image: url(./images/medium2.jpg);
+    }
+}
+
+/* ------------------small screen-------------------- */
+@media screen and (max-width: 600px) {
+    #header {
+        background-image: url(./images/medium3.jpg);
+        /* height: 50vh; */
+    }
+    .header-text {
+        margin-top: 50%;
+        font-size: 1.2rem;
+        margin-left: 5%;
+    }
+    .header-text h1 {
+        font-size: 2.8rem;
+    }
+    .logo-contain {
+        font-size: 1.5rem;
+    }
+    .logo1, .logo2 {
+        padding: 0 5px;
+    }
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+    nav ul {
+        background: var(--pink);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+       padding-top: 50px;
+       z-index: 2;
+       transition: right 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 30px;
+    }
+    nav ul li a:hover {
+        color: var(--background);
+    }
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .subtitle {
+        font-size: 2.3rem;
+    }
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+    .about-col-2 {
+        font-size: 1rem;
+    }
+    .tab-links {
+        font-size: 1.2rem;
+        margin-right: 20px;
+    }
+}

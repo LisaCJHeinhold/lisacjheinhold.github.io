@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisa Heinhold Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./script.js" defer></script>
+    <script src="https://kit.fontawesome.com/940affec7d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="logo-contain">
+                    <h1 class="logo1">Lisa</h1>
+                    <h1 class="logo2">Heinhold</h1>
+                </div>
+                <ul id="sidemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer Student</p>
+                <h1>Hi, I'm <span>Lisa!</span></h1>
+            </div>
+        </div>
+    </div>
+    <!-- About -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/pillar.jpg" alt="Lisa Heinhold">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>I was born and raised in Nampa Idaho. I began studying web development
+                        at BYU - Hawaii as my minor. I am now studying it as my major. I spend
+                        much of my time outside of class using Google and Youtube to teach myself new
+                        languages and practice my skills. I know I love coding because it doesn't
+                        feel like a task, it feels like an activity.
+                        </p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" data-tabname="skills">Skills</p>
+                        <p class="tab-links" data-tabname="experience">Experience</p>
+                        <p class="tab-links" data-tabname="education">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Advanced Skills</span><br>HTML/CSS/SCSS</li>
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>Batch Scripting</li>
+                            <li>SCCM</li>
+                            <li><span>Competent Skills</span><br>C#</li>
+                            <li>React</li>
+                            <li>Powershell Scripting</li>
+                            <li>JAMF</li>
+                            <li>UI/UX</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Technology Support Engineer - 2023</span><br>Managed software for a diverse network of over 4,000 computers, including creating SCCM task sequences for remote software deployment and enhancing security measures to mitigate risks.</li>
+                            <li>Monitored SCCM infrastructure to facilitate software updates and deployments, ensuring the seamless operation of computer labs and systems.</li>
+                            <li>Managed the development and implementation of automation scripts (PowerShell and Batch) to optimize IT processes and reduce manual intervention.</li>
+                            <li>Delivered prompt technical support to faculty, staff, and students, swiftly resolving hardware and software issues.</li>
+                            <li>Demonstrated strong analytical skills in troubleshooting and resolving technical challenges, improving system functionality.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024 - Brigham Young University - Idaho</span><br>BS - Web Design & Development</li>
+                            <li>Certificate - Frontend Development</li>
+                            <li>Certificate - Fullstack Development</li>
+                            <li>Certificate - Web & Computer Programming</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Projects -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="subtitle">My Projects</h1>
+            <div class="project-list">
+                <div class="project">
+                    <img src="./images/stand.jpg" alt="project">
+                    <div class="layer">
+                        <h3>title of project</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem modi odit id ut neque obcaecati!</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="./images/hogsmeade1.jpg" alt="project">
+                    <div class="layer">
+                        <h3>Hogsmeade Chamber of Commerce</h3>
+                        <p>In my Frontend Development class, I took on this project that turned out to be a significant learning journey. I picked up the skills of working with external APIs, improved my use of CSS Grid and Flexbox, and got better at using JavaScript to dynamically render HTML content. On top of that, I also practiced making websites that adapt well to different screen sizes. I chose to do a Hogsmeade chamber of commerce page because I am a big fan of harry potter.</p>
+                        <a href="https://lisacjheinhold.github.io/wdd230/chamber/index.html" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="./images/bountiful1.jpg" alt="project">
+                    <div class="layer">
+                        <h3>Bountiful Foods</h3>
+                        <p>This project served as the concluding task in my frontend development class. The main objective was to create a website tailored for a smoothie shop. The site contains essential components such as an easy-to-use order form and receipts, along with basic information about the location. Notably, it features a spotlight smoothie that changes regularly, injecting an element of dynamism and interaction to captivate users.</p>
+                        <a href="https://lisacjheinhold.github.io/wdd230/bountiful-foods/index.html" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/LisaCJHeinhold" target="_blank" class="btn">See More</a>
+        </div>
+    </div>
+    <!-- contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="contact-center">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa-solid fa-phone"></i> 208-571-9833</p>
+                <a href="mailto:lisacjheinhold@gmail.com" target="_blank" class="email"><i class="fa-solid fa-envelope"></i> lisacjheinhold@gmail.com</a> 
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100008354799274" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/hilisa18/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/lisa-heinhold-485080171/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p class="copy">&copy; <span id="currentyear"></span> | Lisa C. Heinhold | Portfolio | Last Updated: <span id="updated"></span></p>
+    </div>
+</body>
+</html>
