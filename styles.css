@@ -23,6 +23,7 @@ body {
     background-image: url(./images/medium.jpg);
     background-size: cover;
     background-position: center;
+
 }
 .logo-contain {
     display: flex;
@@ -41,7 +42,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 nav ul li {
     display: inline-block;
@@ -93,7 +93,7 @@ nav ul li a:hover::after {
     flex-basis: 35%;
 }
 .about-col-1 img {
-    width: 100%;
+    width: 90%;
     border-radius: 15px;
 }
 .about-col-2 {
@@ -128,6 +128,7 @@ nav ul li a:hover::after {
 .tab-links.active-link::after {
     width: 50%;
 }
+
 .tab-contents ul li {
     list-style: none;
     margin: 10px 0;
@@ -139,17 +140,22 @@ nav ul li a:hover::after {
 .tab-contents {
     display: none;
 }
+#skills.active-tab {
+    display: flex; /* Only flex when active */
+    justify-content: space-between;
+    max-width: 40%;
+}
 .tab-contents.active-tab {
     display: block;
-
 }
+
 /* --------------projects--------------- */
 #projects {
     padding: 50px 0;
 }
 .project-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
     gap: 40px;
     margin-top: 50px;
 }
@@ -267,18 +273,27 @@ nav .fa-solid {
 }
 
 /* ------------------small screen-------------------- */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     #header {
         background-image: url(./images/medium2.jpg);
     }
+    .row {
+        display: block;
+    }
+    #skills {
+        max-width: 50%;
+    }
+}
+@media  screen and (max-width: 750px) {
+    #header {
+        background-image: none;
+    }
+    
 }
 
 /* ------------------small screen-------------------- */
 @media screen and (max-width: 600px) {
-    #header {
-        background-image: url(./images/medium3.jpg);
-        /* height: 50vh; */
-    }
+ 
     .header-text {
         margin-top: 50%;
         font-size: 1.2rem;
@@ -336,5 +351,8 @@ nav .fa-solid {
     .tab-links {
         font-size: 1.2rem;
         margin-right: 20px;
+    }
+    #skills {
+        display: block;
     }
 }
